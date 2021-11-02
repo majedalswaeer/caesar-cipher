@@ -4,6 +4,16 @@ nltk.download('names', quiet=True)
 from nltk.corpus import words, names
 import re
 def encrypt(text,shit_num):
+    """
+    This function encrypt a given text with small and capital letter also with numbers
+
+    Args:
+        text:String
+        shit_num : Integer
+
+    Returns:
+        An enrypted text
+    """
     cipher_words = []
     words =text.split()
     for word in words:
@@ -19,9 +29,28 @@ def encrypt(text,shit_num):
     return ' '.join(cipher_words)
 
 def decrypt(text,shit_num):
+    """
+    This function decrypt a given text with small and capital letter also with numbers
+
+    Args:
+        text:String
+        shit_num : Integer
+
+    Returns:
+        An enrypted text
+    """
     return encrypt(text,- shit_num)
     
 def crack(text):
+    """
+    This function that will decode the cipher so that an encrypted message can be transformed into its original state WITHOUT access to the key.
+
+    Args:
+        text:String
+
+    Returns:
+        original state message: String
+    """
     words_list = words.words()
     names_list = names.words()
 
